@@ -98,7 +98,7 @@ app.get("/api/perfil/:DPI", verifyToken, async (req, res) => {
 });
 
 // Ruta para actualizar información del perfil (POST)
-app.post("/api/perfil/:DPI", verifyToken, async (req, res) => {
+app.post("/api/perfil/:DPI", async (req, res) => {
   try {
     const db = getDB();
     const collection = db.collection(collectionUsuarios);
